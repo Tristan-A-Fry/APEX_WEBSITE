@@ -26,7 +26,7 @@ const NavBar = () => {
         <nav className="absolute left-1/2 transform -translate-x-1/2 hidden lg:flex space-x-6">
 
           <Link
-            to="/home"
+            to="/"
             className="!text-gray-700 hover:!text-red-500 flex items-center gap-1 cursor-pointer"
           >
             Home
@@ -41,7 +41,7 @@ const NavBar = () => {
         </nav>
 
         {/* Right: Hamburger (Mobile only) */}
-        <div className="lg:hidden">
+        <div className="xl:hidden">
           <button onClick={() => setMobileMenuOpen(!mobileMenuOpen)}>
             {mobileMenuOpen ? (
               <XMarkIcon className="h-6 w-6 text-gray-700" />
@@ -54,14 +54,19 @@ const NavBar = () => {
 
       {/* Mobile Dropdown Menu */}
       {mobileMenuOpen && (
-        <div className="md:hidden px-8 pb-4">
-          <nav className="flex flex-col space-y-2">
-            <a href="#" className="text-gray-700 hover:text-blue-600">Home</a>
-            <a href="#" className="text-gray-700 hover:text-blue-600">Drilling and Completions</a>
-            <a href="#" className="text-gray-700 hover:text-blue-600">Subsea Facilities</a>
-            <a href="#" className="text-gray-700 hover:text-blue-600">Project Controls</a>
-            <a href="#" className="text-gray-700 hover:text-blue-600">Systems Engineering</a>
-            <a href="#" className="text-gray-700 hover:text-blue-600">Subsea Well Access</a>
+        <div className="lg:hidden px-8 pb-4">
+          <nav className="flex flex-col space-y-2 text-gray-700">
+          <Link
+            to="/"
+            className="!text-gray-700 hover:!text-red-500 flex items-center gap-1 cursor-pointer"
+          >
+            Home
+          </Link>
+            <DrillingDropdown />
+            <SubseaFacilitiesDropdown />
+            <ProjectControlsDropdown />
+            <SystemsEngineeringDropdown />
+            <SubseaWellAccessDropdown /> 
           </nav>
         </div>
       )}
