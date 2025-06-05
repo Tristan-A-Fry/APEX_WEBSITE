@@ -1,6 +1,7 @@
 
 // src/pages/HomePage.jsx
 import { useEffect } from "react";
+import { Link } from "react-router-dom";
 import ServiceCard from "../components/ServiceCard";
 
 import completions from "/public/services/oilrig.jpg";
@@ -106,9 +107,13 @@ export default function HomePage() {
           </div>
 
           {/* CTA Button */}
-          <button className="mt-4 w-max px-6 py-3 !bg-red-700 !hover:bg-red-900 text-white !font-bold rounded shadow">
-            Read More →
-          </button>
+          <Link
+            to="/all-products-services"
+            className="!text-white !font-semibold">
+            <button className="mt-4 w-max px-6 py-3 !bg-red-700 hover:!bg-red-500 text-white !font-bold rounded shadow">
+              Read More →
+            </button>
+          </Link>
         </div>
       </section>
 

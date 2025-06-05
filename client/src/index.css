@@ -90,3 +90,7 @@ button:focus-visible {
   --font-jetbrainsreg: JetBrainsReg, "sans-serif"
 }
 
+html{
+  scroll-behavior: smooth;
+}
+

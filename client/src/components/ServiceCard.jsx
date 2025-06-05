@@ -1,5 +1,4 @@
 
-
 import React from "react";
 import PropTypes from "prop-types";
 import { Link } from "react-router-dom";
@@ -8,7 +7,7 @@ const ServiceCard = ({ title, image, link }) => {
   return (
     <Link to={link} className="block">
       <div
-        className="relative rounded-lg overflow-hidden shadow-md hover:shadow-lg transition-shadow duration-300 group hover:brightness-150"
+        className="relative rounded-lg overflow-hidden shadow-md hover:shadow-lg transition-shadow duration-300 group"
         style={{
           backgroundImage: `url(${image})`,
           backgroundSize: "cover",
@@ -17,7 +16,7 @@ const ServiceCard = ({ title, image, link }) => {
         }}
       >
         {/* Dark overlay */}
-        <div className="absolute inset-0 bg-black/50 bg-opacity-40 group-hover:bg-opacity-60 transition duration-300"></div>
+        <div className="absolute inset-0 bg-black opacity-60 group-hover:opacity-40 transition-opacity duration-300"></div>
 
         {/* Content */}
         <div className="relative z-10 h-full flex flex-col justify-end p-4">
@@ -39,5 +38,7 @@ ServiceCard.propTypes = {
 };
 
 export default ServiceCard;
+
+
 
 

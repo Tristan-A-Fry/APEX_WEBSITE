@@ -4,6 +4,8 @@ import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import logo from "../assets/apex_logo_white.jpg";
 import { Bars3Icon, XMarkIcon } from "@heroicons/react/24/outline";
+import { ChevronRightIcon } from '@heroicons/react/24/solid'
+
 import DrillingDropdown from "./DrillingDropdown.jsx";
 import SystemsEngineeringDropdown from "./SystemsEngineeringDropdown";
 import SubseaFacilitiesDropdown from "./SubseaFacilitiesDropdown.jsx";
@@ -33,12 +35,6 @@ const NavBar = () => {
           >
             Home
           </Link>
-          <Link
-            to="/products"
-            className="font-semibold !text-gray-700 hover:!text-red-700 flex items-center gap-1 cursor-pointer"
-          >
-            Product & Services
-          </Link>
 
           <ProductsDropdown />
 
@@ -58,7 +54,7 @@ const NavBar = () => {
           <Link
             to="/contact"
           >
-            <button className="!bg-red-700 !hover:bg-red-900 text-white !font-bold rounded shadow"> Contact Us </button>
+            <button className="!bg-red-700 hover:!bg-red-500 text-white !font-bold rounded shadow"> Contact Us </button>
           </Link>
 
         </nav>
@@ -85,12 +81,8 @@ const NavBar = () => {
           >
             Home
           </Link>
-          <Link
-            to="/products"
-            className="font-semibold !text-gray-700 hover:!text-red-500 flex items-center gap-1 cursor-pointer"
-          >
-            Product & Services
-          </Link>
+          
+
           <Link
             to="/news"
             className="font-semibold !text-gray-700 hover:!text-red-500 flex items-center gap-1 cursor-pointer"
@@ -104,11 +96,14 @@ const NavBar = () => {
             About Us
           </Link>
 
+
+          <ProductsDropdown />
           <Link
             to="/contact"
           >
-            <button className="!bg-red-500 !hover:bg-red-900 text-white !font-bold rounded shadow"> Contact Us </button>
+            <button className="!bg-red-700 hover:!bg-red-500 text-white !font-bold rounded shadow"> Contact Us </button>
           </Link>
+
           </nav>
         </div>
       )}
