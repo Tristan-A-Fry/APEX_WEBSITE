@@ -18,6 +18,8 @@ import DrillingCompletions from "./pages/DrillingCompletions.jsx";
 import AllProductsServices from "./pages/AllProductsServicesPage.jsx";
 
 export default function App() {
+
+
   return (
     <div className="flex flex-col min-h-screen font-sans text-gray-900">
       <NavBar2 />

@@ -30,8 +30,8 @@ export default function HomePage() {
 
 
   return (
-    <main className="flex-grow w-full">
-      <section className="relative h-[600px] overflow-hidden">
+    <main className="flex-grow w-full bg-white dark:bg-[#2b2b2b]">
+      <section className="relative h-[600px] overflow-hidden ">
         {/* ✅ Video - Background Layer */}
         <video
           className="absolute top-0 left-0 w-full h-full object-cover z-0"
@@ -58,7 +58,7 @@ export default function HomePage() {
 
       
 
-      <section className="flex flex-col md:flex-row h-auto bg-white text-black mt-24 gap-32 pb-24">
+      <section className="flex flex-col md:flex-row h-auto bg-white dark:bg-[#2b2b2b] text-black dark:text-white mt-24 gap-32 pb-24">
         {/* Left: Image */}
         <div className="md:w-1/2 w-full">
           <img
@@ -71,7 +71,7 @@ export default function HomePage() {
         {/* Right: Text & Features */}
         <div className="md:w-1/2 w-full flex flex-col justify-center px-8 py-12 space-y-6">
           <div>
-            <h3 className="text-xl text-red-700 font-bold uppercase">Uncover </h3>
+            <h3 className="text-xl text-red-700  font-bold uppercase">Uncover </h3>
             <h2 className="text-3xl md:text-4xl font-extrabold uppercase">the Excellence in Engineering & Operations</h2>
           </div>
 
@@ -79,7 +79,7 @@ export default function HomePage() {
             Providing reliable control systems across the full energy market
           </h4>
 
-          <p className=" text-xl text-gray-500 leading-relaxed">
+          <p className=" text-xl text-gray-500 dark:text-white leading-relaxed">
           Apex Subsea’s consulting team provides turnkey solutions around Upper Completions, Well interventions, and other life of field operations from the Rig/MSV. Our <span className="text-red-700"> experienced facilities engineering team </span> has delivered successful Subsea Tie Backs covering SPS and SURF areas from concept, engineering, procurement, and offshore installation operations.
           </p>
 
@@ -87,7 +87,7 @@ export default function HomePage() {
           <div className="flex gap-12 justify-center">
             {/* Badge 1 */}
             <div className="flex flex-col items-center">
-              <div className="rounded-full border-4 border-red-700 w-16 h-16 flex items-center justify-center text-lg font-bold text-black bg-white">
+              <div className="rounded-full border-4 border-red-700 w-16 h-16 flex items-center justify-center text-lg font-bold text-black dark:text-white bg-white dark:bg-[#2b2b2b]">
                 200+
               </div>
               <p className="text-m text-red-700 mt-2 text-center">
@@ -97,7 +97,7 @@ export default function HomePage() {
 
             {/* Badge 2 */}
             <div className="flex flex-col items-center">
-              <div className="rounded-full border-4 border-red-700 w-16 h-16 flex items-center justify-center text-lg font-bold text-black bg-white">
+              <div className="rounded-full border-4 border-red-700 w-16 h-16 flex items-center justify-center text-lg font-bold text-black bg-white dark:text-white bg-white dark:bg-[#2b2b2b]">
                 200+
               </div>
               <p className="text-m text-red-700 mt-2 text-center">
@@ -118,9 +118,9 @@ export default function HomePage() {
       </section>
 
       {/* Services Section */}
-      <section className="py-20 bg-gray-100">
+      <section className="py-20 bg-white dark:bg-[#2b2b2b]">
         <div className="max-w-7xl mx-auto px-4">
-          <h2 className="text-4xl font-bold text-center text-gray-800 mb-12">
+          <h2 className="text-4xl font-bold text-center text-black dark:text-white mb-12">
             Our Services
           </h2>
           <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-6">
@@ -136,8 +136,8 @@ export default function HomePage() {
         </div>
       </section>
 
-      <section id="partners" className="py-20 bg-gray-50">
-        <h2 className="text-3xl font-bold text-center text-gray-800 mb-12">Our Partners</h2>
+      <section id="partners" className="py-20 bg-white dark:bg-[#2b2b2b]">
+        <h2 className="text-3xl font-bold text-center text-black dark:text-white mb-12">Our Partners</h2>
         
         <div className="max-w-6xl mx-auto grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-6 px-4">
           {["bp", "hwcgBlack", "talos", "shell", "totalenergies", "anadarko"].map((partner) => (

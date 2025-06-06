@@ -22,7 +22,7 @@ const ProductsDropdown = () => {
         {/* Main Label */}
         <div
           onClick={() => setIsMainOpen(!isMainOpen)}
-          className="text-gray-700 hover:text-red-700 flex items-center gap-1"
+          className="font-semibold text-gray-700 dark:text-white hover:text-red-700 flex items-center gap-1"
         >
           Products & Services
           <span
@@ -30,7 +30,7 @@ const ProductsDropdown = () => {
               isMainOpen ? "rotate-90" : ""
             }`}
           >
-            <ChevronRightIcon className="w-4 h-6" />
+            <ChevronRightIcon className="w-5 h-5" strokeWidth={2} />
           </span>
         </div>
 

@@ -2,6 +2,7 @@
 
 import React from "react";
 import HeroSection from "../../components/HeroSection.jsx"; 
+import SlideshowHeroSection from "../../components/SlideshowHeroSection.jsx";
 
 import rigSelectionImage from "/public/services/rig-selection/rig1.jpg"; 
 import rigSelectionImage2 from "/public/services/rig-selection/rig2.jpg"; 
@@ -16,19 +17,21 @@ import ucImage from "/public/services/uc1.png";
 import RelatedContent from "../../components/relatedContent/RelatedContent.jsx";
 
 const RigSelectionPage = () => {
+  const heroImages = [rigSelectionImage, rigSelectionImage2, rigSelectionImage3];
+
   return (
     <div>
       {/* Hero Section */}
-      <HeroSection
+      
+      <SlideshowHeroSection
+        images={heroImages}
         title="Rig Selection"
         subtitle="The Excellence in Rig Selection & Operations"
-        backgroundImage={heroImage}
-        position="center"
       />
 
       {/* Section 1 */}
-      <section className="flex flex-col md:flex-row items-center gap-8 py-12 px-4 ">
-        <div className="w-full md:w-1/2">
+      <section className="flex flex-col items-center gap-8 py-12 px-4 ">
+        <div className="w-full max-w-3xl mx-auto">
           <img
             src={rigSelectionImage}
             alt="Rig Selection"
@@ -52,8 +55,8 @@ const RigSelectionPage = () => {
       </section>
 
       {/* Section 2 */}
-      <section className="flex flex-col md:flex-row-reverse items-center gap-8 py-12 px-4 ">
-        <div className="w-full md:w-1/2">
+      <section className="flex flex-col  items-center gap-8 py-12 px-4">
+        <div className="w-full max-w-3xl mx-auto">
           <img
             src={rigSelectionImage2}
             alt="Rig Selection"
@@ -77,8 +80,8 @@ const RigSelectionPage = () => {
       </section>
 
       {/* Section 3 */}
-      <section className="flex flex-col md:flex-row items-center gap-8 py-12 px-4 ">
-        <div className="w-full md:w-1/2">
+      <section className="flex flex-col items-center gap-8 py-12 px-4 ">
+        <div className="w-full max-w-3xl mx-auto">
           <img
             src={rigSelectionImage3}
             alt="Rig Selection"
