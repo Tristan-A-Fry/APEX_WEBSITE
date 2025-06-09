@@ -94,6 +94,42 @@ button:focus-visible {
   animation: zoomOut 1s ease-in-out;
 }
 
+@keyframes timelineFill {
+  0% {
+    transform: scaleY(0);
+  }
+  100% {
+    transform: scaleY(1);
+  }
+}
+
+.timelineFill {
+  transform-origin: top;
+  animation: timelineFill 2s ease-out forwards;
+}
+
+
+@keyframes fadeInUp {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.fadeInUp {
+  animation: fadeInUp 0.8s ease-out forwards;
+}
+
+
+
+
+
+
+
 .animate-scroll {
   animation: scroll 20s linear infinite;
 }

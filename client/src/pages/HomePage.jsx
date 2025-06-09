@@ -14,8 +14,6 @@ const logoSizes = {
   hwcgBlack: "h-24 text-black",
   shell: "h-20",
   talos: "h-32",
-  totalenergies: "h-20",
-  anadarko: "h-32",
   default: "h-24"
 };
 
@@ -55,6 +53,27 @@ export default function HomePage() {
           </div>
         </div>
       </section>
+
+      {/* Services Section */}
+      <section className="py-20 bg-white dark:bg-[#2b2b2b]">
+        <div className="max-w-7xl mx-auto px-4">
+          <h2 className="text-4xl font-bold text-center text-black dark:text-white mb-12">
+            Our Solutions
+          </h2>
+          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-6">
+            {services.map((service) => (
+              <ServiceCard
+                key={service.title}
+                title={service.title}
+                image={service.image}
+                link={service.link}
+              />
+            ))}
+          </div>
+        </div>
+      </section>
+
+
 
       
 
@@ -117,30 +136,11 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* Services Section */}
-      <section className="py-20 bg-white dark:bg-[#2b2b2b]">
-        <div className="max-w-7xl mx-auto px-4">
-          <h2 className="text-4xl font-bold text-center text-black dark:text-white mb-12">
-            Our Services
-          </h2>
-          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-6">
-            {services.map((service) => (
-              <ServiceCard
-                key={service.title}
-                title={service.title}
-                image={service.image}
-                link={service.link}
-              />
-            ))}
-          </div>
-        </div>
-      </section>
-
       <section id="partners" className="py-20 bg-white dark:bg-[#2b2b2b]">
         <h2 className="text-3xl font-bold text-center text-black dark:text-white mb-12">Our Partners</h2>
         
         <div className="max-w-6xl mx-auto grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-6 px-4">
-          {["bp", "hwcgBlack", "talos", "shell", "totalenergies", "anadarko"].map((partner) => (
+          {["bp", "hwcgBlack", "talos", "shell","beacon","repsol","oxy","eni","kosmos","woodside","karoon"].map((partner) => (
             <div
               key={partner}
               className="w-60 h-28 bg-white rounded-lg flex items-center justify-center 

@@ -60,7 +60,7 @@ const RigSelectionPage = () => {
           <img
             src={rigSelectionImage2}
             alt="Rig Selection"
-            className="w-full h-auto rounded shadow-lg"
+            className="w-full h-auto rounded shadow-lg "
           />
         </div>
         <div className="w-full md:w-1/2">

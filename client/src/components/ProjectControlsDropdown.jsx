@@ -4,12 +4,12 @@ export default function ProjectControlsDropdown() {
   return (
         <ul className="flex flex-col py-2 px-4 text-sm text-gray-800">
           <li>
-            <Link to="/drillingcompletions" className="block py-2 px-3 !text-gray-600 bg-white hover:bg-red-100 hover:text-red-500 !font-bold rounded">
+            <Link to="/project-controls" className="block py-2 px-3 !text-gray-600 bg-white hover:bg-red-100 hover:text-red-500 !font-bold rounded">
               GO TO: Project Controls 
             </Link>
           </li>
           <li>
-            <Link to="/project/cost-controls" className="block py-2 px-3 !text-black bg-white hover:bg-red-100 hover:text-red-500 font-semibold rounded">
+            <Link to="/cost-control" className="block py-2 px-3 !text-black bg-white hover:bg-red-100 hover:text-red-500 font-semibold rounded">
               Cost Controls
             </Link>
           </li>
