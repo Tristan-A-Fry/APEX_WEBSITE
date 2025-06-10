@@ -94,18 +94,19 @@ button:focus-visible {
   animation: zoomOut 1s ease-in-out;
 }
 
+
 @keyframes timelineFill {
   0% {
-    transform: scaleY(0);
+    height: 0%;
   }
   100% {
-    transform: scaleY(1);
+    height: 100%;
   }
 }
 
 .timelineFill {
+  animation: timelineFill 3s ease-out forwards;
   transform-origin: top;
-  animation: timelineFill 2s ease-out forwards;
 }
 
 
