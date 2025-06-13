@@ -20,6 +20,13 @@ import UcPage from "./pages/DrillingAndCompletionsPages/UcPage.jsx";
 
 import ProjectControlsLandingPage from "./pages/ProjectControls/ProjectControlsLandingPage.jsx";
 import CostControlPage from "./pages/ProjectControls/CostControlsPage.jsx";
+import ScheduleManagementPage from "./pages/ProjectControls/ScheduleManagementPage.jsx";
+import QualityControlInspectionPage from "./pages/ProjectControls/QualityControlInspectionPage.jsx";
+import WBSSetupPage from "./pages/ProjectControls/WBSSetupPage.jsx";
+
+
+
+
 
 import StorageMaitenenceLandingPage from "./pages/Storage&Maitenence/StorageMaitenenceLandingPage.jsx";
 
@@ -46,6 +53,9 @@ export default function App() {
               
               <Route path="/project-controls" element={<ProjectControlsLandingPage />} />
               <Route path="/cost-control" element={<CostControlPage />} />
+              <Route path="/schedule-management" element={<ScheduleManagementPage />} />
+              <Route path="/quality-inspection" element={<QualityControlInspectionPage />} />
+              <Route path="/wbs-setup" element={<WBSSetupPage />} />
 
               <Route path="/subsea-inspections" element={<SubseaInspectionsLandingPage />} />
 

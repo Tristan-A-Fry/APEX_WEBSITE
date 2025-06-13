@@ -3,6 +3,7 @@
 import { useEffect } from "react";
 import { Link } from "react-router-dom";
 import ServiceCard from "../components/ServiceCard";
+import FeatureSlider from "../components/FeatureSlider.jsx";
 
 import completions from "/public/services/oilrig.jpg";
 import monitoring from "../assets/apex_logo_white.jpg";
@@ -73,68 +74,8 @@ export default function HomePage() {
         </div>
       </section>
 
+      <FeatureSlider />
 
-
-      
-
-      <section className="flex flex-col md:flex-row h-auto bg-white dark:bg-[#2b2b2b] text-black dark:text-white mt-24 gap-32 pb-24">
-        {/* Left: Image */}
-        <div className="md:w-1/2 w-full">
-          <img
-            src="/bg-images/drill.jpg"
-            alt="Our Approach"
-            className="h-full w-full object-cover"
-          />
-        </div>
-
-        {/* Right: Text & Features */}
-        <div className="md:w-1/2 w-full flex flex-col justify-center px-8 py-12 space-y-6">
-          <div>
-            <h3 className="text-xl text-red-700  font-bold uppercase">Uncover </h3>
-            <h2 className="text-3xl md:text-4xl font-extrabold uppercase">the Excellence in Engineering & Operations</h2>
-          </div>
-
-          <h4 className="text-xl md:text-2xl font-semibold">
-            Providing reliable control systems across the full energy market
-          </h4>
-
-          <p className=" text-xl text-gray-500 dark:text-white leading-relaxed">
-          Apex Subsea’s consulting team provides turnkey solutions around Upper Completions, Well interventions, and other life of field operations from the Rig/MSV. Our <span className="text-red-700"> experienced facilities engineering team </span> has delivered successful Subsea Tie Backs covering SPS and SURF areas from concept, engineering, procurement, and offshore installation operations.
-          </p>
-
-          {/* Feature Badges */}
-          <div className="flex gap-12 justify-center">
-            {/* Badge 1 */}
-            <div className="flex flex-col items-center">
-              <div className="rounded-full border-4 border-red-700 w-16 h-16 flex items-center justify-center text-lg font-bold text-black dark:text-white bg-white dark:bg-[#2b2b2b]">
-                200+
-              </div>
-              <p className="text-m text-red-700 mt-2 text-center">
-                200+ years combined experience
-              </p>
-            </div>
-
-            {/* Badge 2 */}
-            <div className="flex flex-col items-center">
-              <div className="rounded-full border-4 border-red-700 w-16 h-16 flex items-center justify-center text-lg font-bold text-black bg-white dark:text-white bg-white dark:bg-[#2b2b2b]">
-                200+
-              </div>
-              <p className="text-m text-red-700 mt-2 text-center">
-                Deepwater wells in production
-              </p>
-            </div>
-          </div>
-
-          {/* CTA Button */}
-          <Link
-            to="/all-products-services"
-            className="!text-white !font-semibold">
-            <button className="mt-4 w-max px-6 py-3 !bg-red-700 hover:!bg-red-500 text-white !font-bold rounded shadow">
-              Read More →
-            </button>
-          </Link>
-        </div>
-      </section>
 
       <section id="partners" className="py-20 bg-white dark:bg-[#2b2b2b]">
         <h2 className="text-3xl font-bold text-center text-black dark:text-white mb-12">Our Partners</h2>

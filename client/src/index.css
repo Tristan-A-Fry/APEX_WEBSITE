@@ -125,12 +125,6 @@ button:focus-visible {
   animation: fadeInUp 0.8s ease-out forwards;
 }
 
-
-
-
-
-
-
 .animate-scroll {
   animation: scroll 20s linear infinite;
 }
@@ -145,4 +139,28 @@ html{
 }
 
 @custom-variant dark (&:where(.dark, .dark *));
+
+
+.swiper-button-next,
+.swiper-button-prev {
+  color: #b91c1c; 
+
+}
+
+.swiper-button-next::after,
+.swiper-button-prev::after {
+  font-size: 2rem; /* change this to control arrow size */
+}
+
+/* Base (inactive) bullet */
+.swiper-pagination-bullet {
+  background-color: #6b7280; /* Tailwind gray-500 */
+  opacity: 1;
+  transition: background-color 0.3s ease;
+}
+
+/* Active bullet */
+.swiper-pagination-bullet-active {
+  background-color: #b91c1c; /* Tailwind red-700 or your brand color */
+}
 

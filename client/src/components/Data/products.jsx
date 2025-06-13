@@ -38,6 +38,34 @@ const products = [
     image: "/images/multiphase_sampling_solutions.jpg",
     link: "/",
   },
+  {
+    id: 6,
+    title: "Cost Control",
+    category: "Project Controls",
+    image: "/images/multiphase_sampling_solutions.jpg",
+    link: "/cost-control",
+  },
+  {
+    id: 7,
+    title: "Schedule Management",
+    category: "Project Controls",
+    image: "/images/multiphase_sampling_solutions.jpg",
+    link: "/schedule-management",
+  },
+  {
+    id: 8,
+    title: "Quality Control & Inspection",
+    category: "Project Controls",
+    image: "/images/multiphase_sampling_solutions.jpg",
+    link: "/quality-inspection",
+  },
+  {
+    id: 9,
+    title: "WBS Setup",
+    category: "Project Controls",
+    image: "/images/multiphase_sampling_solutions.jpg",
+    link: "/wbs-setup",
+  },
 
 ];
 

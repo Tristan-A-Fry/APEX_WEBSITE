@@ -14,13 +14,18 @@ export default function ProjectControlsDropdown() {
             </Link>
           </li>
           <li>
-            <Link to="/project/schedule-management" className="block py-2 px-3 !text-black bg-white hover:bg-red-100 hover:text-red-500 font-semibold rounded">
+            <Link to="/schedule-management" className="block py-2 px-3 !text-black bg-white hover:bg-red-100 hover:text-red-500 font-semibold rounded">
               Schedule Management
             </Link>
           </li>
           <li>
-            <Link to="/project/quality-inspection" className="block py-2 px-3 !text-black bg-white hover:bg-red-100 hover:text-red-500 font-semibold rounded">
+            <Link to="/quality-inspection" className="block py-2 px-3 !text-black bg-white hover:bg-red-100 hover:text-red-500 font-semibold rounded">
               Quality Control and Inspection
+            </Link>
+          </li>
+          <li>
+            <Link to="/wbs-setup" className="block py-2 px-3 !text-black bg-white hover:bg-red-100 hover:text-red-500 font-semibold rounded">
+              WBS Setup 
             </Link>
           </li>
         </ul>

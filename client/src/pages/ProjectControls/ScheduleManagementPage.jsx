@@ -1,39 +1,42 @@
 
 
+
 import React, { useRef, useEffect, useState } from "react";
-import bolo from "../../../public/software/p2.png";
-import graph from "../../../public/software/graph.jpg";
 import HeroSection from "../../components/HeroSection.jsx";
 import testImage from "../../../public/company/stock1.jpeg";
 import RelatedContent from "../../components/relatedContent/RelatedContent.jsx";
 
+import sm1 from "../../../public/software/sm_1.jpg"
+import sm2 from "../../../public/software/sm_2.png"
+import sm3 from "../../../public/software/sm_3.png"
+
 const logoSizes = {
-  excel: "h-24",
-  bolo: "h-10",
+  sm_1: "h-48",
+  sm_2: "h-48",
+  sm_3: "h-48",
 };
 
 const timelineData = [
   {
-    title: "AFE + WBS",
-    description: "• Project Team \n •  Topside \n • Subsea \n •  Misc",
+    title: "Level 1",
+    description: "• Communication Schedule \n •  High level strategic plan scheudle \n • One page with project key milestones",
   },
   {
-    title: "Consolidate VOWD",
+    title: "Level 2",
     description:
-      "• Forecast, EAC, Variances\n• Issues / Concerns\n• Review / Alignment Meetings",
+      "• Project delivery manager schedule (Rollup of internal P6 CMS CPM Level 3 shcedule)",
   },
   {
-    title: "Finalize",
-    description: "• Generate Cost Phasing and Performance Scorecard",
+    title: "Level 3 (Company)",
+    description: "• Internal P6 CMS CPM level 3 schedule \n • Project team schedule \n • Risk schedule model ",
   },
   {
-    title: "Project Review",
-    description: "• Publish & Report",
-    image: graph,
+    title: "Level 3 (Contractors)",
+    description: "• Contractors P6 CPM Level 3 schedule (External) \n • Resource loaded schedule \n • Project delivery manager, detailed schedule \n • Progress information ",
   },
 ];
 
-const CostControlsPage = () => {
+const ScheduleManagementPage = () => {
   const [visibleItems, setVisibleItems] = useState([]);
   const timelineRefs = useRef([]);
   const [timelineVisible, setTimelineVisible] = useState(false);
@@ -80,7 +83,6 @@ const CostControlsPage = () => {
     const observerOptions = {
       threshold: 0.2
     };
-
     const observer = new IntersectionObserver((entries) => {
       entries.forEach((entry) => {
         if (entry.isIntersecting) {
@@ -98,7 +100,7 @@ const CostControlsPage = () => {
   return (
     <div>
       <HeroSection
-        title="Cost Control"
+        title="Schedule Management"
         subtitle="Clarity in Cost Tracking and Reporting"
         backgroundImage={testImage}
         position="center"
@@ -107,24 +109,15 @@ const CostControlsPage = () => {
         {/* Header Section */}
         <div className="max-w-4xl mb-12 text-center mt-5">
           <p className="text-black font-semibold text-base leading-relaxed">
-            The "Cost" process provides a structured approach to managing project expenditures
-            and schedules effectively. It begins with defining project controls software and
-            tools, then moves into developing AFE (Authorization for Expenditure) and WBS
-            (Work Breakdown Structure) to organize project components. Once these are
-            established, the process involves consolidating VOWD (Value of Work Done),
-            forecasts, and EAC (Estimate at Completion) while addressing issues and ensuring
-            alignment through review meetings. Afterward, cost phasing and performance
-            scorecards are generated to visualize progress and financial metrics. Finally, the
-            process culminates in project review and reporting, ensuring transparency and
-            informed decision-making throughout the project's lifecycle.
+            The Schedule Management process leverages the Integrated Master Schedule (IMS) methodology to deliver structured, bottom-up scheduling from Level 1 to Level 3. Using tools like Primavera P6 and FUSE, it emphasizes the Critical Path Method (CPM) to ensure schedule integrity, diagnostics, and performance benchmarking. This approach enables clear communication, risk visibility, and accountability across all project levels—from high-level overviews to detailed contractor schedules—supporting informed decision-making and on-time project delivery.
           </p>
 
           <section id="software" className="py-20 bg-white dark:bg-[#2b2b2b]">
             <div className="max-w-6xl mx-auto grid grid-cols-2 sm:grid-cols-3 md:grid-cols-3 gap-6 px-4">
-              {["excel", "bolo", "coupa", "docvue", "atlas"].map((software) => (
+              {["sm_1", "sm_2", "sm_3"].map((software) => (
                 <div
                   key={software}
-                  className="w-60 h-28 bg-white rounded-lg flex items-center justify-center 
+                  className="w-60 h-56 bg-white rounded-lg flex items-center justify-center 
                              shadow-md hover:shadow-[0_4px_20px_rgba(239,68,68,0.6)] transition-shadow duration-300"
                 >
                   <img
@@ -299,4 +292,4 @@ const CostControlsPage = () => {
   );
 };
 
-export default CostControlsPage;
+export default ScheduleManagementPage;

@@ -5,8 +5,26 @@ import lc1 from "/public/services/lc1.png";
 import lc2 from "/public/services/lc2.jpg";
 import lc3 from "/public/services/lc3.png";
 
+import HeroSection from "../../components/HeroSection.jsx";
+import RelatedContent from "../../components/relatedContent/RelatedContent.jsx";
+
+import tempLogo from "../../assets/apex_logo_white.jpg";
+import drillingImage from "/public/services/drilling4.jpg";
+import rigSelectionImage from "/public/services/rig-selection/rig1.jpg"; 
+import lcImage from "/public/services/lc1.png";
+import ucImage from "/public/services/uc1.png";
+
+
+
 const UcPage = () => {
   return (
+    <div>
+      <HeroSection 
+        title="Upper Completions"
+        subtitle="Upper Completions"
+        backgroundImage={ucImage}
+        position="center"
+      />
     <section className="py-12 px-4">
       {/* Main Lower Completions Section */}
       <div className="flex flex-col md:flex-row-reverse items-center gap-8 mb-12">
@@ -98,6 +116,7 @@ const UcPage = () => {
         </div>
       </div>
     </section>
+    </div>
   );
 };
 

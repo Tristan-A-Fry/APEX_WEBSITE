@@ -4,18 +4,40 @@ import lc1 from "/public/services/lc1.png";
 import lc2 from "/public/services/lc2.jpg";
 import lc3 from "/public/services/lc3.png";
 
+import HeroSection from "../../components/HeroSection.jsx";
+
+import RelatedContent from "../../components/relatedContent/RelatedContent.jsx";
+import tempLogo from "../../assets/apex_logo_white.jpg";
+import drillingImage from "/public/services/drilling4.jpg";
+import rigSelectionImage from "/public/services/rig-selection/rig1.jpg"; 
+import lcImage from "/public/services/lc1.png";
+import ucImage from "/public/services/uc1.png";
+
+
 const LcPage = () => {
   return (
-    <section className="py-12 px-4">
-      {/* Main Lower Completions Section */}
-      <div className="flex flex-col md:flex-row-reverse items-center gap-8 mb-12">
-        {/* Left: Text */}
+    <div>
+      <HeroSection
+        title="Lower Completions"
+        subtitle="Lower Completions"
+        backgroundImage={lc1}
+        position="center"
+      />
+      {/* Section 1 */}
+      <section className="flex flex-col items-center gap-8 py-12 px-4 ">
+        <div className="w-full max-w-3xl mx-auto">
+          <img
+            src={lc1}
+            alt="Lower Completions 1"
+            className="w-full h-auto rounded shadow-lg"
+          />
+        </div>
         <div className="w-full md:w-1/2">
-          <h2 className="text-red-600 uppercase font-semibold mb-2">
-            Lower Completions
+          <h2 className="text-red-800 uppercase font-semibold mb-2">
+            Lower Completions 
           </h2>
           <h1 className="text-3xl md:text-4xl font-bold mb-4">
-            Optimizing Production from the Ground Up
+            Optimizing Production from the Ground Up 
           </h1>
           <p className="text-gray-700 mb-4">
             We develop conventional and reversible synthetic drill-in and
@@ -33,29 +55,19 @@ const LcPage = () => {
             hole gravel pack simulation).
           </p>
         </div>
-        {/* Right: Image */}
-        <div className="w-full md:w-1/2">
-          <img
-            src={lc1}
-            alt="Lower Completions"
-            className="w-full max-w-[600px] h-[300px] object-cover rounded shadow-lg w-full h-auto rounded shadow-lg"
-          />
-        </div>
-      </div>
+      </section>
 
-      {/* Additional Section 1: Image Left */}
-      <div className="flex flex-col md:flex-row-reverse items-center gap-8 mb-12">
-        {/* Left: Image */}
-        <div className="w-full md:w-1/2">
+      {/* Section 2 */}
+      <section className="flex flex-col  items-center gap-8 py-12 px-4">
+        <div className="w-full max-w-3xl mx-auto">
           <img
             src={lc2}
-            alt="Frac Systems"
-            className="w-full max-w-[600px] h-[300px] object-cover rounded shadow-lg w-full h-auto rounded shadow-lg"
+            alt="Lower Completions 2"
+            className="w-full h-auto rounded shadow-lg "
           />
         </div>
-        {/* Right: Text */}
         <div className="w-full md:w-1/2">
-          <h2 className="text-2xl md:text-3xl font-bold mb-4">
+          <h2 className="text-red-800 uppercase font-semibold mb-2">
             Advanced Frac Systems
           </h2>
           <p className="text-gray-700 mb-4">
@@ -68,23 +80,25 @@ const LcPage = () => {
             operations and enhanced production for your unconventional reservoirs.
           </p>
         </div>
-      </div>
+      </section>
 
-      {/* Additional Section 2: Image Right */}
-      <div className="flex flex-col md:flex-row items-center gap-8">
-        {/* Right: Image */}
-        <div className="w-full md:w-1/2">
+
+      {/* Section 3 */}
+      <section className="flex flex-col items-center gap-8 py-12 px-4 ">
+        <div className="w-full max-w-3xl mx-auto">
           <img
             src={lc3}
-            alt="Completion Design Software"
-            className="w-full max-w-[600px] h-[300px] object-cover rounded shadow-lg w-full h-auto rounded shadow-lg"
+            alt="Lower completions 3"
+            className="w-full h-auto rounded shadow-lg"
           />
         </div>
-        {/* Left: Text */}
         <div className="w-full md:w-1/2">
-          <h2 className="text-2xl md:text-3xl font-bold mb-4">
-            Completion Design & Simulation
+          <h2 className="text-red-800 uppercase font-semibold mb-2">
+            Completion Design Software
           </h2>
+          <h1 className="text-3xl md:text-4xl font-bold mb-4">
+            Comprehensive Support from Start to Finish
+          </h1>
           <p className="text-gray-700 mb-4">
             We utilize industry-leading software like StimPlan, WellPlan, WellCat,
             and ackPro to design, simulate, and optimize your lower completion
@@ -95,8 +109,45 @@ const LcPage = () => {
             and long-term efficiency.
           </p>
         </div>
+      </section>
+      <div className="flex justify-center flex-wrap gap-4">
+       <RelatedContent
+              title="related content"
+              items={[
+                {
+                  title: "Rig Selection Process Explained",
+                  image: rigSelectionImage,
+                  category: "Our Services",
+                  date: "May 15, 2025",
+                  link: "/rig-selection-process",
+                },
+                {
+                  title: "Drilling Operations Insights",
+                  image: drillingImage,
+                  category: "Our Operations",
+                  date: "May 10, 2025",
+                  link: "/drilling",
+                },
+                {
+                  title: "Upper Completions",
+                  image: ucImage,
+                  category: "Our Operations",
+                  date: "April 21, 2025",
+                  link: "/upper-completions",
+                },
+                {
+                  title: "Project Controls",
+                  image: tempLogo,
+                  category: "Project Controls",
+                  date: "May 05, 2025",
+                  link: "/project-controls",
+                },
+              ]}
+            />
       </div>
-    </section>
+
+
+    </div>
   );
 };
 
