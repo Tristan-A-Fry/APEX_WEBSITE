@@ -4,6 +4,7 @@ import { useEffect } from "react";
 import { Link } from "react-router-dom";
 import ServiceCard from "../components/ServiceCard";
 import FeatureSlider from "../components/FeatureSlider.jsx";
+import GulfMap from "../components/GulfMap.jsx";
 
 import completions from "/public/services/oilrig.jpg";
 import monitoring from "../assets/apex_logo_white.jpg";
@@ -75,7 +76,8 @@ export default function HomePage() {
       </section>
 
       <FeatureSlider />
-
+      <GulfMap />
+      
 
       <section id="partners" className="py-20 bg-white dark:bg-[#2b2b2b]">
         <h2 className="text-3xl font-bold text-center text-black dark:text-white mb-12">Our Partners</h2>

@@ -25,15 +25,16 @@ import QualityControlInspectionPage from "./pages/ProjectControls/QualityControl
 import WBSSetupPage from "./pages/ProjectControls/WBSSetupPage.jsx";
 
 
+import SurfSPSLandingPage from "./pages/SURF-SPS/SurfSPSLandingPage.jsx";
+import SurfPage from "./pages/SURF-SPS/SurfPage.jsx";
+import SystemsEngineeringPage from "./pages/SURF-SPS/SystemsEngineeringPage.jsx";
+import SkidPackagingIEManagementPage from "./pages/SURF-SPS/SkidPackagingIEManagementPage.jsx";
+import ControlDCSPage from "./pages/SURF-SPS/ControlDCSPage.jsx";
 
 
 
 import StorageMaitenenceLandingPage from "./pages/Storage&Maitenence/StorageMaitenenceLandingPage.jsx";
-
-import SurfLandingPage from "./pages/SURF/SurfLandingPage.jsx";
-
 import SubseaInspectionsLandingPage from "./pages/SubseaInspections/SubseaInspectionsLandingPage.jsx";
-
 import AllProductsServices from "./pages/AllProductsServicesPage.jsx";
 
 export default function App() {
@@ -59,7 +60,11 @@ export default function App() {
 
               <Route path="/subsea-inspections" element={<SubseaInspectionsLandingPage />} />
 
-              <Route path="/surf" element={<SurfLandingPage/>} />
+              <Route path="/surf-sps" element={<SurfSPSLandingPage/>} />
+              <Route path="/surf-execution" element={<SurfPage />} />
+              <Route path="/systems-engineering" element={<SystemsEngineeringPage/>} />
+              <Route path="/skid-packaging" element={<SkidPackagingIEManagementPage />} />
+              <Route path="/controls-dcs" element={<ControlDCSPage />} />
 
               <Route path="/drillingcompletions" element={<DrillingCompletions/>} />
               <Route path="/rig-selection" element={<RigSelectionPage />} />
