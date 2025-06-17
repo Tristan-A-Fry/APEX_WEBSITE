@@ -3,6 +3,7 @@ import ScrollToTop from "./utils/ScrollToTop.jsx";
 
 import NavBar from "./components/NavBar";
 import NavBar2 from "./components/NavBar2";
+import BreadCrumbs from "./components/Breadcrumbs.jsx";
 
 import Footer from "./components/Footer";
 import { Routes, Route } from "react-router-dom";
@@ -43,6 +44,7 @@ export default function App() {
   return (
     <div className="flex flex-col min-h-screen font-sans text-gray-900">
       <NavBar2 />
+      <BreadCrumbs />
         <ScrollToTop />
           <Routes>
               <Route path="/" element={<HomePage />} />

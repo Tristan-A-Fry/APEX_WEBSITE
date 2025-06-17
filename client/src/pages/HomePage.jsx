@@ -16,6 +16,7 @@ const logoSizes = {
   hwcgBlack: "h-24 text-black",
   shell: "h-20",
   talos: "h-32",
+  beaconn2: "h-32",
   default: "h-24"
 };
 
@@ -23,7 +24,7 @@ export default function HomePage() {
 
   const services = [
     { title: "Drilling & Completions", image: completions, link: "/drillingcompletions" },
-    { title: "SURF", image: monitoring, link: "#" },
+    { title: "SURF", image: monitoring, link: "/surf-sps" },
     { title: "Storage & Maitenence", image: optimisation, link: "#" },
     { title: "Subsea Inspections / I3P", image: intelligence, link: "#" },
   ];
@@ -57,10 +58,10 @@ export default function HomePage() {
       </section>
 
       {/* Services Section */}
-      <section className="py-20 bg-white dark:bg-[#2b2b2b]">
+      <section className="py-20 bg-gray-100 dark:bg-[#2b2b2b]">
         <div className="max-w-7xl mx-auto px-4">
           <h2 className="text-4xl font-bold text-center text-black dark:text-white mb-12">
-            Our Solutions
+            Core Operations
           </h2>
           <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-6">
             {services.map((service) => (
@@ -83,10 +84,10 @@ export default function HomePage() {
         <h2 className="text-3xl font-bold text-center text-black dark:text-white mb-12">Our Partners</h2>
         
         <div className="max-w-6xl mx-auto grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-6 px-4">
-          {["bp", "hwcgBlack", "talos", "shell","beacon","repsol","oxy","eni","kosmos","woodside","karoon"].map((partner) => (
+          {["bp", "hwcgBlack", "talos", "shell","beaconn2", "repsol","oxy","eni","kosmos","woodside","karoon"].map((partner) => (
             <div
               key={partner}
-              className="w-60 h-28 bg-white rounded-lg flex items-center justify-center 
+              className="w-60 h-28 bg-white dark:bg-[#2b2b2b] rounded-lg flex items-center justify-center 
                          shadow-md hover:shadow-[0_4px_20px_rgba(239,68,68,0.6)] transition-shadow duration-300"
             >
               <img
