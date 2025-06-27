@@ -1,0 +1,88 @@
+{
+  "routes": [
+    {
+      "route": "/",
+      "rewrite": "/index.html"
+    },
+    {
+      "route": "/about",
+      "rewrite": "/index.html"
+    },
+    {
+      "route": "/storage-maitenence",
+      "rewrite": "/index.html"
+    },
+    {
+      "route": "/contact",
+      "rewrite": "/index.html"
+    },
+    {
+      "route": "/all-products-services",
+      "rewrite": "/index.html"
+    },
+    {
+      "route": "/project-controls",
+      "rewrite": "/index.html"
+    },
+    {
+      "route": "/cost-control",
+      "rewrite": "/index.html"
+    },
+    {
+      "route": "/schedule-management",
+      "rewrite": "/index.html"
+    },
+    {
+      "route": "/quality-inspection",
+      "rewrite": "/index.html"
+    },
+    {
+      "route": "/wbs-setup",
+      "rewrite": "/index.html"
+    },
+    {
+      "route": "/subsea-inspections",
+      "rewrite": "/index.html"
+    },
+    {
+      "route": "/surf-sps",
+      "rewrite": "/index.html"
+    },
+    {
+      "route": "/surf-execution",
+      "rewrite": "/index.html"
+    },
+    {
+      "route": "/systems-engineering",
+      "rewrite": "/index.html"
+    },
+    {
+      "route": "/skid-packaging",
+      "rewrite": "/index.html"
+    },
+    {
+      "route": "/controls-dcs",
+      "rewrite": "/index.html"
+    },
+    {
+      "route": "/drillingcompletions",
+      "rewrite": "/index.html"
+    },
+    {
+      "route": "/rig-selection",
+      "rewrite": "/index.html"
+    },
+    {
+      "route": "/drilling",
+      "rewrite": "/index.html"
+    },
+    {
+      "route": "/lower-completions",
+      "rewrite": "/index.html"
+    },
+    {
+      "route": "/upper-completions",
+      "rewrite": "/index.html"
+    }
+  ]
+}
