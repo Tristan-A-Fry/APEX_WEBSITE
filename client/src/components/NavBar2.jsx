@@ -9,12 +9,12 @@ import { ChevronRightIcon } from '@heroicons/react/24/solid'
 import DarkModeToggle from "../utils/DarkModeToggle.jsx";
 
 
-import DrillingDropdown from "./DrillingDropdown.jsx";
-import SystemsEngineeringDropdown from "./SystemsEngineeringDropdown";
-import SubseaFacilitiesDropdown from "./SubseaFacilitiesDropdown.jsx";
-import ProjectControlsDropdown from "./ProjectControlsDropdown.jsx";
-import SubseaWellAccessDropdown from "./SubseaWellAccessDropdown.jsx";
-import ProductsDropdown from "./ProductsDropdown.jsx";
+import DrillingDropdown from "./dropdowns/DrillingDropdown.jsx";
+import SystemsEngineeringDropdown from "./dropdowns/SystemsEngineeringDropDown.jsx";
+import SubseaFacilitiesDropdown from "./dropdowns/SubseaFacilitiesDropdown.jsx";
+import ProjectControlsDropdown from "./dropdowns/ProjectControlsDropdown.jsx";
+import SubseaWellAccessDropdown from "./dropdowns/SubseaWellAccessDropdown.jsx";
+import ProductsDropdown from "./dropdowns/ProductsDropdown.jsx";
 
 const NavBar = () => {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);

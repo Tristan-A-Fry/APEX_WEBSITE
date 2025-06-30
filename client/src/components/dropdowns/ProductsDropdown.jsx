@@ -3,11 +3,11 @@
 import React, { useState, useRef } from "react";
 import { Link } from "react-router-dom";
 
-import DrillingDropdown from "./DrillingDropdown";
-import StorageMaitenenceDropdown from "./dropdowns/StorageMaitenenceDropdown.jsx";
-import ProjectControlsDropdown from "./ProjectControlsDropdown";
-import SurfDropdown from "./dropdowns/SurfDropwdown.jsx";
-import SubseaInspectionsDropdown from "./dropdowns/SubseaInspectionsDropdown.jsx";
+import DrillingDropdown from "./DrillingDropdown.jsx";
+import StorageMaitenenceDropdown from "./StorageMaitenenceDropdown.jsx";
+import ProjectControlsDropdown from "./ProjectControlsDropdown.jsx";
+import SurfDropdown from "./SurfDropwdown.jsx";
+import SubseaInspectionsDropdown from "./SubseaInspectionsDropdown.jsx";
 
 import { ChevronRightIcon } from '@heroicons/react/24/solid'
 
@@ -41,10 +41,10 @@ const ProductsDropdown = () => {
 
         {/* Main Dropdown */}
         {isMainOpen && (
-          <div className="absolute left-0 mt-2 w-64 bg-white border border-gray-300 rounded shadow-lg z-50">
+          <div className="absolute left-0 mt-2 w-64 bg-white border border-gray-300 rounded shadow-lg z-50 dark:bg-[#2b2b2b] dark:text-white dark:border-gray-700">
             {/* All Products & Services Link */}
             <div className="px-4 py-2 hover:bg-red-100">
-              <Link to="/all-products-services" className="!text-black">
+              <Link to="/all-products-services" className="!text-black dark:!text-white">
                 All Products & Services
               </Link>
             </div>
@@ -59,7 +59,7 @@ const ProductsDropdown = () => {
                     setOpenSubmenu("drilling");
                   }
                 }}
-                className="w-full text-left px-4 py-2 hover:bg-red-100 flex items-center justify-between cursor-pointer"
+                className="w-full text-left px-4 py-2 hover:bg-red-100 flex items-center justify-between cursor-pointer "
               >
                 Drilling & Completions
                 <span

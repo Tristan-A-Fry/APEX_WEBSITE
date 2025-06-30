@@ -1,7 +1,6 @@
 
 import ScrollToTop from "./utils/ScrollToTop.jsx";
 
-import NavBar from "./components/NavBar";
 import NavBar2 from "./components/NavBar2";
 import BreadCrumbs from "./components/Breadcrumbs.jsx";
 
