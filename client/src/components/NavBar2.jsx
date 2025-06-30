@@ -1,13 +1,10 @@
-
-
-import React, { useState, useEffect} from "react";
+import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import logo from "../assets/apex_logo_white.jpg";
 import { Bars3Icon, XMarkIcon } from "@heroicons/react/24/outline";
 import { ChevronRightIcon } from '@heroicons/react/24/solid'
 
 import DarkModeToggle from "../utils/DarkModeToggle.jsx";
-
 
 import DrillingDropdown from "./dropdowns/DrillingDropdown.jsx";
 import SystemsEngineeringDropdown from "./dropdowns/SystemsEngineeringDropDown.jsx";
@@ -18,21 +15,6 @@ import ProductsDropdown from "./dropdowns/ProductsDropdown.jsx";
 
 const NavBar = () => {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
-  const [darkMode, setDarkMode] = useState(false);
-
-  useEffect(() =>{
-    if(darkMode){
-      document.documentElement.classList.add('dark');
-    }
-    else{
-
-      document.documentElement.classList.remove('dark');
-    }
-  },[darkMode])
-
-  const toggleDarkMode = () => {
-    setDarkMode(!darkMode);
-  }
 
   return (
     <header className="sticky top-0 z-50 bg-white dark:bg-[#2b2b2b] shadow w-full">
@@ -98,7 +80,7 @@ const NavBar = () => {
           <nav className="flex flex-col space-y-2 text-gray-700">
           <Link
             to="/"
-            className="!text-gray-700 hover:!text-red-500 flex items-center gap-1 cursor-pointer"
+            className="!text-gray-700 hover:!text-red-500 flex items-center gap-1 cursor-pointer dark:!text-white"
           >
             Home
           </Link>
@@ -106,13 +88,13 @@ const NavBar = () => {
 
           <Link
             to="/news"
-            className="font-semibold !text-gray-700 hover:!text-red-500 flex items-center gap-1 cursor-pointer"
+            className="font-semibold !text-gray-700 hover:!text-red-500 flex items-center gap-1 cursor-pointer dark:!text-white"
           >
             News
           </Link>
           <Link
             to="/about"
-            className="font-semibold !text-gray-700 hover:!text-red-500 flex items-center gap-1 cursor-pointer"
+            className="font-semibold !text-gray-700 hover:!text-red-500 flex items-center gap-1 cursor-pointer dark:!text-white"
           >
             About Us
           </Link>
