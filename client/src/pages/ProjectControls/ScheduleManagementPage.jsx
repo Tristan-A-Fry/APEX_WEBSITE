@@ -1,9 +1,6 @@
-
-
-
 import React, { useRef, useEffect, useState } from "react";
 import HeroSection from "../../components/HeroSection.jsx";
-import testImage from "../../../public/company/stock1.jpeg";
+import tempImage from "../../assets/apex_logo_white.jpg";
 import RelatedContent from "../../components/relatedContent/RelatedContent.jsx";
 
 import sm1 from "../../../public/software/sm_1.jpg"
@@ -102,13 +99,13 @@ const ScheduleManagementPage = () => {
       <HeroSection
         title="Schedule Management"
         subtitle="Clarity in Cost Tracking and Reporting"
-        backgroundImage={testImage}
+        backgroundImage={tempImage}
         position="center"
       />
-      <div className="flex flex-col items-center bg-white min-h-screen py-12">
+      <div className="flex flex-col items-center bg-white dark:bg-[#2b2b2b] min-h-screen py-12">
         {/* Header Section */}
         <div className="max-w-4xl mb-12 text-center mt-5">
-          <p className="text-black font-semibold text-base leading-relaxed">
+          <p className="text-black dark:text-white font-semibold text-base leading-relaxed">
             The Schedule Management process leverages the Integrated Master Schedule (IMS) methodology to deliver structured, bottom-up scheduling from Level 1 to Level 3. Using tools like Primavera P6 and FUSE, it emphasizes the Critical Path Method (CPM) to ensure schedule integrity, diagnostics, and performance benchmarking. This approach enables clear communication, risk visibility, and accountability across all project levels—from high-level overviews to detailed contractor schedules—supporting informed decision-making and on-time project delivery.
           </p>
 
@@ -117,7 +114,7 @@ const ScheduleManagementPage = () => {
               {["sm_1", "sm_2", "sm_3"].map((software) => (
                 <div
                   key={software}
-                  className="w-60 h-56 bg-white rounded-lg flex items-center justify-center 
+                  className="w-60 h-56 bg-white dark:bg-[#232323] rounded-lg flex items-center justify-center 
                              shadow-md hover:shadow-[0_4px_20px_rgba(239,68,68,0.6)] transition-shadow duration-300"
                 >
                   <img
@@ -142,7 +139,7 @@ const ScheduleManagementPage = () => {
           <div
             ref={timelineRef}
             className={`absolute left-1/2 transform -translate-x-1/2 top-0 bottom-0 w-1 
-            bg-gradient-to-b from-red-500 via-blue-900 to-red-500 rounded-full 
+            bg-gradient-to-b from-red-500 via-blue-900 to-red-500 dark:from-red-400 dark:via-blue-300 dark:to-red-400 rounded-full 
             z-0 origin-top ${timelineVisible ? "timelineFill" : ""}`}
           ></div>
 
@@ -155,7 +152,7 @@ const ScheduleManagementPage = () => {
                   <div
                     ref={(el) => (timelineRefs.current[index] = el)}
                     data-index={index}
-                    className={`bg-white shadow-md border border-gray-200 rounded-lg p-4 max-w-3xl 
+                    className={`bg-white dark:bg-[#232323] shadow-md border border-gray-200 dark:border-gray-700 rounded-lg p-4 max-w-3xl 
                     overflow-hidden ${
                       visibleItems[index] ? "fadeInUp" : ""
                     }`}
@@ -186,10 +183,10 @@ const ScheduleManagementPage = () => {
                     )}
 
                     {/* Text content */}
-                    <h3 className="text-xl font-bold text-black mb-2">
+                    <h3 className="text-xl font-bold text-black dark:text-white mb-2">
                       {item.title}
                     </h3>
-                    <p className="text-gray-700 text-sm whitespace-pre-line break-words">
+                    <p className="text-gray-700 dark:text-gray-300 text-sm whitespace-pre-line break-words">
                       {item.description}
                     </p>
                   </div>
@@ -199,7 +196,7 @@ const ScheduleManagementPage = () => {
                   <div
                     ref={(el) => (timelineRefs.current[index] = el)}
                     data-index={index}
-                    className={`bg-white shadow-md border border-gray-200 rounded-lg p-4 max-w-3xl 
+                    className={`bg-white dark:bg-[#232323] shadow-md border border-gray-200 dark:border-gray-700 rounded-lg p-4 max-w-3xl 
                     overflow-hidden ${
                       visibleItems[index] ? "fadeInUp" : ""
                     }`}
@@ -223,10 +220,10 @@ const ScheduleManagementPage = () => {
 
 
                     {/* Text content */}
-                    <h3 className="text-xl font-bold text-black mb-2">
+                    <h3 className="text-xl font-bold text-black dark:text-white mb-2">
                       {item.title}
                     </h3>
-                    <p className="text-gray-700 text-sm whitespace-pre-line break-words">
+                    <p className="text-gray-700 dark:text-gray-300 text-sm whitespace-pre-line break-words">
                       {item.description}
                     </p>
 
@@ -246,8 +243,8 @@ const ScheduleManagementPage = () => {
               {/* Timeline circle */}
               <div
                 className="absolute left-1/2 transform -translate-x-1/2 w-3 h-3 
-                bg-black rounded-full 
-                border-4 border-black z-10"
+                bg-black dark:bg-white rounded-full 
+                border-4 border-black dark:border-white z-10"
               ></div>
             </div>
           ))}
@@ -257,32 +254,33 @@ const ScheduleManagementPage = () => {
                 title="related content"
                 items={[
                   {
-                    title: "Schedule Management",
-                    image: testImage,
+                    title: "Cost Control",
+                    image: tempImage,
+                    category: "Our Services",
+                    date: "May 05, 2025",
+                    link: "/cost-control",
+                  },
+                  {
+                    title: "Quality Control and Inspection",
+                    image: tempImage,
                     category: "Our Services",
                     date: "May 15, 2025",
-                    link: "/schedule-mangement",
+                    link: "/quality-inspection",
                   },
                   {
                     title: "WBS Setup",
-                    image: testImage,
-                    category: "Our Operations",
+                    image: tempImage,
+                    category: "Our Services",
                     date: "May 10, 2025",
                     link: "/wbs-setup",
                   },
+
                   {
-                    title: "",
-                    image: testImage,
-                    category: "Our Services",
-                    date: "May 05, 2025",
-                    link: "/lower-completions",
-                  },
-                  {
-                    title: "",
-                    image: testImage,
+                    title: "Drilling & Completions",
+                    image: tempImage,
                     category: "Our Operations",
                     date: "April 21, 2025",
-                    link: "/upper-completions",
+                    link: "/drilling-completions",
                   },
                 ]}
               />

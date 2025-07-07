@@ -1,7 +1,7 @@
 
 import ScrollToTop from "./utils/ScrollToTop.jsx";
 
-import NavBar2 from "./components/NavBar2";
+import NavBar from "./components/NavBar";
 import BreadCrumbs from "./components/Breadcrumbs.jsx";
 
 import Footer from "./components/Footer";
@@ -12,7 +12,7 @@ import ContactPage from "./pages/ContactPage.jsx";
 import AboutPage from "./pages/AboutPage.jsx";
 
 
-import DrillingCompletions from "./pages/DrillingCompletions.jsx";
+import DrillingCompletionsLandingPage from "./pages/DrillingAndCompletionsPages/DrillingCompletionsLandingPage.jsx";
 import RigSelectionPage from "./pages/DrillingAndCompletionsPages/RigSelectionPage.jsx";
 import DrillingPage from "./pages/DrillingAndCompletionsPages/DrillingPage.jsx";
 import LcPage from "./pages/DrillingAndCompletionsPages/LcPage.jsx";
@@ -42,7 +42,7 @@ export default function App() {
 
   return (
     <div className="flex flex-col min-h-screen font-sans text-gray-900">
-      <NavBar2 />
+      <NavBar />
       <BreadCrumbs />
         <ScrollToTop />
           <Routes>
@@ -67,7 +67,7 @@ export default function App() {
               <Route path="/skid-packaging" element={<SkidPackagingIEManagementPage />} />
               <Route path="/controls-dcs" element={<ControlDCSPage />} />
 
-              <Route path="/drillingcompletions" element={<DrillingCompletions/>} />
+              <Route path="/drilling-completions" element={<DrillingCompletionsLandingPage/>} />
               <Route path="/rig-selection" element={<RigSelectionPage />} />
               <Route path="/drilling" element={<DrillingPage />} />
               <Route path="/lower-completions" element={<LcPage />} />

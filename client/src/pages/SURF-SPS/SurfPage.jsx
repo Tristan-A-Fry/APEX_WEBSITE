@@ -1,5 +1,3 @@
-
-
 import React, { useRef, useEffect, useState } from "react";
 import bolo from "../../../public/software/p2.png";
 import graph from "../../../public/software/graph.jpg";
@@ -110,10 +108,10 @@ const SurfPage = () => {
         backgroundImage={testImage}
         position="center"
       />
-      <div className="flex flex-col items-center bg-white min-h-screen py-12">
+      <div className="flex flex-col items-center bg-white dark:bg-[#2b2b2b] min-h-screen py-12">
         {/* Header Section */}
         <div className="max-w-4xl mb-12 text-center mt-5">
-          <p className="text-black font-semibold text-base leading-relaxed">
+          <p className="text-black dark:text-white font-semibold text-base leading-relaxed">
             The SURF Execution Framework at Apex Subsea provides a structured approach to field development from concept selection to offshore operations. 
             The process begins with selecting and appraising key engineering criteria, progresses through project definition and procurement,
             and culminates in installation, commissioning, and life-of-field support. This comprehensive lifecycle ensures reliable subsea 
@@ -127,7 +125,7 @@ const SurfPage = () => {
           <div
             ref={timelineRef}
             className={`absolute left-1/2 transform -translate-x-1/2 top-0 bottom-0 w-1 
-            bg-gradient-to-b from-red-500 via-blue-900 to-red-500 rounded-full 
+            bg-gradient-to-b from-red-500 via-blue-900 to-red-500 dark:from-red-400 dark:via-blue-300 dark:to-red-400 rounded-full 
             z-0 origin-top ${timelineVisible ? "timelineFill" : ""}`}
           ></div>
 
@@ -140,7 +138,7 @@ const SurfPage = () => {
                   <div
                     ref={(el) => (timelineRefs.current[index] = el)}
                     data-index={index}
-                    className={`bg-white shadow-md border border-gray-200 rounded-lg p-4 max-w-3xl 
+                    className={`bg-white dark:bg-[#232323] shadow-md border border-gray-200 dark:border-gray-700 rounded-lg p-4 max-w-3xl 
                     overflow-hidden ${
                       visibleItems[index] ? "fadeInUp" : ""
                     }`}
@@ -171,10 +169,10 @@ const SurfPage = () => {
                     )}
 
                     {/* Text content */}
-                    <h3 className="text-xl font-bold text-black mb-2">
+                    <h3 className="text-xl font-bold text-black dark:text-white mb-2">
                       {item.title}
                     </h3>
-                    <p className="text-gray-700 text-sm whitespace-pre-line break-words">
+                    <p className="text-gray-700 dark:text-gray-300 text-sm whitespace-pre-line break-words">
                       {item.description}
                     </p>
                   </div>
@@ -184,7 +182,7 @@ const SurfPage = () => {
                   <div
                     ref={(el) => (timelineRefs.current[index] = el)}
                     data-index={index}
-                    className={`bg-white shadow-md border border-gray-200 rounded-lg p-4 max-w-3xl 
+                    className={`bg-white dark:bg-[#232323] shadow-md border border-gray-200 dark:border-gray-700 rounded-lg p-4 max-w-3xl 
                     overflow-hidden ${
                       visibleItems[index] ? "fadeInUp" : ""
                     }`}
@@ -208,10 +206,10 @@ const SurfPage = () => {
 
 
                     {/* Text content */}
-                    <h3 className="text-xl font-bold text-black mb-2">
+                    <h3 className="text-xl font-bold text-black dark:text-white mb-2">
                       {item.title}
                     </h3>
-                    <p className="text-gray-700 text-sm whitespace-pre-line break-words">
+                    <p className="text-gray-700 dark:text-gray-300 text-sm whitespace-pre-line break-words">
                       {item.description}
                     </p>
 
@@ -231,8 +229,8 @@ const SurfPage = () => {
               {/* Timeline circle */}
               <div
                 className="absolute left-1/2 transform -translate-x-1/2 w-3 h-3 
-                bg-black rounded-full 
-                border-4 border-black z-10"
+                bg-black dark:bg-white rounded-full 
+                border-4 border-black dark:border-white z-10"
               ></div>
             </div>
           ))}

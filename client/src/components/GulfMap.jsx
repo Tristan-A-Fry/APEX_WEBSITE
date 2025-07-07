@@ -70,6 +70,8 @@ export default function GulfMap() {
   const [isDark, setIsDark] = useState(() =>
     document.documentElement.classList.contains("dark")
   );
+  // Collapsible legend state
+  const [legendOpen, setLegendOpen] = useState(() => window.innerWidth >= 640);
 
   useEffect(() => {
     const observer = new MutationObserver(() => {
@@ -81,7 +83,17 @@ export default function GulfMap() {
       attributeFilter: ["class"]
     });
 
-    return () => observer.disconnect();
+    // Responsive: open on desktop, closed on mobile
+    const handleResize = () => {
+      setLegendOpen(window.innerWidth >= 640);
+    };
+    window.addEventListener("resize", handleResize);
+    handleResize();
+
+    return () => {
+      observer.disconnect();
+      window.removeEventListener("resize", handleResize);
+    };
   }, []);
 
   const filteredProjects = projects.filter((proj) =>
@@ -91,7 +103,7 @@ export default function GulfMap() {
   return (
    <div className="w-full bg-gray-100 dark:bg-[#2b2b2b]">
       {/* 🔠 Section Title */}
-      <h2 className="text-3xl font-bold text-center text-black dark:text-white dark:bg-[#2b2b2b] my-2 p-4">
+      <h2 className="text-3xl font-bold text-center text-black dark:text-white dark:bg-[#313131] my-2 p-4">
         Operational History
       </h2>
 
@@ -109,32 +121,52 @@ export default function GulfMap() {
           maxBoundsViscosity={1.0}
           attributionControl={false}
         >
-          {/* Legend/Search as a true Leaflet control */}
+          {/* Collapsible Legend/Search as a true Leaflet control */}
           <LegendControl>
-            <div className="bg-white p-3 rounded shadow-md w-[300px] space-y-4 dark:bg-black dark:text-white">
-              {/* Search */}
-              <input
-                type="text"
-                placeholder="Search for a project..."
-                className="w-full p-2 border border-gray-300 rounded"
-                value={searchTerm}
-                onChange={(e) => setSearchTerm(e.target.value)}
-              />
-              {/* Legend */}
-              <div className="text-sm">
-                <p className="flex items-center gap-2 mb-1">
-                  <span dangerouslySetInnerHTML={{ __html: getMapPinSVG("#22c55e") }} />
-                  <span>Facilities</span>
-                </p>
-                <p className="flex items-center gap-2 mb-1">
-                  <span dangerouslySetInnerHTML={{ __html: getMapPinSVG("#ef4444") }} />
-                  <span>D&amp;C</span>
-                </p>
-                <p className="flex items-center gap-2">
-                  <span dangerouslySetInnerHTML={{ __html: getMapPinSVG(isDark ? "#fff" : "#000000") }} />
-                  <span>Other / Response</span>
-                </p>
+            <div className="sm:w-[300px] w-[85vw] max-w-xs">
+              {/* Collapsible button for mobile */}
+              <div className="block sm:hidden mb-2">
+                <button
+                  className="w-full bg-!white dark:!bg-black text-black dark:text-white rounded px-2 py-1 text-sm font-semibold flex items-center justify-between"
+                  onClick={() => setLegendOpen((open) => !open)}
+                  aria-expanded={legendOpen}
+                  aria-controls="map-legend-content"
+                >
+                  Legend & Search
+                  <span>{legendOpen ? "▲" : "▼"}</span>
+                </button>
               </div>
+              {/* Legend content */}
+              {(legendOpen || window.innerWidth >= 640) && (
+                <div
+                  id="map-legend-content"
+                  className="bg-white p-2 sm:p-3 rounded shadow-md space-y-2 sm:space-y-4 dark:bg-black dark:text-white text-sm sm:text-base"
+                >
+                  {/* Search */}
+                  <input
+                    type="text"
+                    placeholder="Search for a project..."
+                    className="w-full p-2 border border-gray-300 rounded text-xs sm:text-sm"
+                    value={searchTerm}
+                    onChange={(e) => setSearchTerm(e.target.value)}
+                  />
+                  {/* Legend */}
+                  <div className="text-xs sm:text-sm">
+                    <p className="flex items-center gap-x-2 mb-1">
+                      <span className="w-4 h-4 sm:w-5 sm:h-5 leading-none flex items-center justify-center" dangerouslySetInnerHTML={{ __html: getMapPinSVG("#22c55e") }} />
+                      <span>Facilities</span>
+                    </p>
+                    <p className="flex items-center gap-x-2 mb-1">
+                      <span className="w-4 h-4 sm:w-5 sm:h-5 leading-none flex items-center justify-center" dangerouslySetInnerHTML={{ __html: getMapPinSVG("#ef4444") }} />
+                      <span>D&amp;C</span>
+                    </p>
+                    <p className="flex items-center gap-x-2">
+                      <span className="w-4 h-4 sm:w-5 sm:h-5 leading-none flex items-center justify-center" dangerouslySetInnerHTML={{ __html: getMapPinSVG(isDark ? "#fff" : "#000000") }} />
+                      <span>Other / Response</span>
+                    </p>
+                  </div>
+                </div>
+              )}
             </div>
           </LegendControl>
           <TileLayer

@@ -1,4 +1,3 @@
-
 import React from "react";
 import HeroSection from "../../components/HeroSection.jsx"; 
 import WBSImage from "/public/services/project-controls/wbs-diagram.png"; 
@@ -8,7 +7,7 @@ import tempLogo from "../../assets/apex_logo_white.jpg";
 
 const WBSSetupPage = () => {
   return (
-    <div>
+    <div className="bg-white dark:bg-[#2b2b2b] min-h-screen">
       {/* Hero Section */}
       <HeroSection
         title="WBS Setup"
@@ -27,16 +26,16 @@ const WBSSetupPage = () => {
           />
         </div>
         <div className="w-full md:w-1/2">
-          <h2 className="text-red-800 uppercase font-semibold mb-2">
+          <h2 className="text-red-800 dark:text-red-400 uppercase font-semibold mb-2">
             WBS SETUP
           </h2>
-          <h1 className="text-3xl md:text-4xl font-bold mb-4">
+          <h1 className="text-3xl md:text-4xl font-bold mb-4 text-black dark:text-white">
             Structured Project Alignment
           </h1>
-          <p className="text-gray-700 mb-4">
+          <p className="text-gray-700 dark:text-gray-300 mb-4">
             The Work Breakdown Structure (WBS) provides alignment with project execution and contracting strategy. It acts as a framework for organizing, planning, monitoring, analyzing, and controlling the project.
           </p>
-          <p className="text-gray-700 mb-4">
+          <p className="text-gray-700 dark:text-gray-300 mb-4">
             The WBS integrates schedule and budget elements, establishes control account responsibilities, and provides auditable data to support internal teams and project partners. It also supports structured reporting and financial transparency across the full project lifecycle.
           </p>
         </div>
@@ -52,13 +51,13 @@ const WBSSetupPage = () => {
           />
         </div>
         <div className="w-full md:w-1/2">
-          <h2 className="text-red-800 uppercase font-semibold mb-2">
+          <h2 className="text-red-800 dark:text-red-400 uppercase font-semibold mb-2">
             WBS COMPONENTS
           </h2>
-          <h1 className="text-3xl md:text-4xl font-bold mb-4">
+          <h1 className="text-3xl md:text-4xl font-bold mb-4 text-black dark:text-white">
             What the WBS Enables
           </h1>
-          <ul className="list-disc list-inside text-gray-700 space-y-2">
+          <ul className="list-disc list-inside text-gray-700 dark:text-gray-300 space-y-2">
             <li>Alignment with execution/contracting strategy</li>
             <li>Project organization and cost control structure</li>
             <li>Integration of cost, budget, forecast, and schedule</li>
@@ -86,7 +85,7 @@ const WBSSetupPage = () => {
               image: tempLogo,
               category: "Our Operations",
               date: "May 10, 2025",
-              link: "/schedule-mangement",
+              link: "/schedule-management",
             },
             {
               title: "Quality Control & Inspections",

@@ -1,5 +1,3 @@
-
-
 import React, { useState, useRef } from "react";
 import { Link } from "react-router-dom";
 
@@ -11,14 +9,14 @@ import SubseaInspectionsDropdown from "./SubseaInspectionsDropdown.jsx";
 
 import { ChevronRightIcon } from '@heroicons/react/24/solid'
 
-const ProductsDropdown = () => {
+const ProductsDropdown = ({ className = "" }) => {
   const [isMainOpen, setIsMainOpen] = useState(false);
   const [openSubmenu, setOpenSubmenu] = useState(null);
 
   const dropdownRef = useRef(null);
 
   return (
-    <div className="relative cursor-pointer px-1 py-3">
+    <div className="relative cursor-pointer">
       <div
         ref={dropdownRef}
         className="relative cursor-pointer"
@@ -27,7 +25,7 @@ const ProductsDropdown = () => {
         {/* Main Label */}
         <div
           onClick={() => setIsMainOpen(!isMainOpen)}
-          className="font-semibold text-gray-700 dark:text-white hover:text-red-700 flex items-center gap-1"
+          className={`font-RobotoSemiBold flex items-center gap-1 ${className}`}
         >
           Products & Services
           <span

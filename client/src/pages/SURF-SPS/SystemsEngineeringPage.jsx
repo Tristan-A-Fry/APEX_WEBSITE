@@ -1,4 +1,3 @@
-
 import React from "react";
 import HeroSection from "../../components/HeroSection.jsx";
 import SlideshowHeroSection from "../../components/SlideshowHeroSection.jsx";
@@ -15,7 +14,7 @@ const SystemsEngineeringPage = () => {
   const heroImages = [SE1, SE2];
 
   return (
-    <div>
+    <div className="bg-white dark:bg-[#2b2b2b] min-h-screen">
       {/* Hero Section */}
       <HeroSection
         title="Systems Engineering"
@@ -35,13 +34,13 @@ const SystemsEngineeringPage = () => {
           />
         </div>
         <div className="w-full md:w-1/2">
-          <h2 className="text-red-800 uppercase font-semibold mb-2">
+          <h2 className="text-red-800 dark:text-red-400 uppercase font-semibold mb-2">
             XT & Umbilical Engineering
           </h2>
-          <h1 className="text-3xl md:text-4xl font-bold mb-4">
+          <h1 className="text-3xl md:text-4xl font-bold mb-4 text-black dark:text-white">
             Precision Engineering for Field Hardware
           </h1>
-          <p className="text-gray-700 mb-4">
+          <p className="text-gray-700 dark:text-gray-300 mb-4">
             XT Engineering includes trim type and sizing, DH line sizing,
             intervention requirements (PTT, CT, DHPT), and integration of
             operability, hydraulic and electrical systems. We evaluate choke Cv,
@@ -63,13 +62,13 @@ const SystemsEngineeringPage = () => {
           />
         </div>
         <div className="w-full md:w-1/2">
-          <h2 className="text-red-800 uppercase font-semibold mb-2">
+          <h2 className="text-red-800 dark:text-red-400 uppercase font-semibold mb-2">
             SURF Flow Assurance & DCS Integration
           </h2>
-          <h1 className="text-3xl md:text-4xl font-bold mb-4">
+          <h1 className="text-3xl md:text-4xl font-bold mb-4 text-black dark:text-white">
             Integrated Flowline Design & Control Systems
           </h1>
-          <p className="text-gray-700 mb-4">
+          <p className="text-gray-700 dark:text-gray-300 mb-4">
             From planned/unplanned shutdowns and insulation requirements to
             route selection, span, buckling and walking analysis, our Systems
             Engineering supports reliable flowline and jumper performance. We

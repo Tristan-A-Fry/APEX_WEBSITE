@@ -1,4 +1,3 @@
-
 import React from "react";
 import HeroSection from "../../components/HeroSection.jsx";
 import RelatedContent from "../../components/relatedContent/RelatedContent.jsx";
@@ -11,7 +10,7 @@ import drillingImage from "/public/services/drilling4.jpg";
 
 const SkidPackagingIEManagementPage = () => {
   return (
-    <div>
+    <div className="bg-white dark:bg-[#2b2b2b] min-h-screen">
       {/* Hero Section */}
       <HeroSection
         title="Skid Packaging & I&E Management"
@@ -30,13 +29,13 @@ const SkidPackagingIEManagementPage = () => {
           />
         </div>
         <div className="w-full md:w-1/2">
-          <h2 className="text-red-800 uppercase font-semibold mb-2">
+          <h2 className="text-red-800 dark:text-red-400 uppercase font-semibold mb-2">
             Topside Skid Management
           </h2>
-          <h1 className="text-3xl md:text-4xl font-bold mb-4">
+          <h1 className="text-3xl md:text-4xl font-bold mb-4 text-black dark:text-white">
             Integrated Design, Fabrication & Oversight
           </h1>
-          <p className="text-gray-700 mb-4">
+          <p className="text-gray-700 dark:text-gray-300 mb-4">
             Full oversight and management of topside skid packages including
             HPU, CIU, TUTA, and BSDV units. Our support spans from FEED through
             startup, encompassing CWI inspections, engineering design reviews,
@@ -56,13 +55,13 @@ const SkidPackagingIEManagementPage = () => {
           />
         </div>
         <div className="w-full md:w-1/2">
-          <h2 className="text-red-800 uppercase font-semibold mb-2">
+          <h2 className="text-red-800 dark:text-red-400 uppercase font-semibold mb-2">
             Instrumentation & Electrical Coordination
           </h2>
-          <h1 className="text-3xl md:text-4xl font-bold mb-4">
+          <h1 className="text-3xl md:text-4xl font-bold mb-4 text-black dark:text-white">
             Smart Control Infrastructure Deployment
           </h1>
-          <p className="text-gray-700 mb-4">
+          <p className="text-gray-700 dark:text-gray-300 mb-4">
             Our scope includes developing network schedules, I/O lists, and
             instrument indexes. We handle power and comms routing, tubing
             schedules, platform layouts, and component selection. Mechanical

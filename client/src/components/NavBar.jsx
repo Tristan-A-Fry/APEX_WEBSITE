@@ -36,7 +36,7 @@ const NavBar = () => {
             Home
           </Link>
 
-          <ProductsDropdown />
+          <ProductsDropdown className="!font-semibold !text-gray-700 dark:!text-white hover:!text-red-700 flex items-center gap-1 cursor-pointer py-3" />
 
           <Link
             to="/news"
@@ -51,7 +51,7 @@ const NavBar = () => {
             About Us
           </Link>
 
-          <DarkModeToggle />
+          <DarkModeToggle className="!py-1 !font-semibold !bg-white dark:!bg-[#2b2b2b] dark:!text-white rounded" />
 
           <Link
             to="/contact"
@@ -66,9 +66,9 @@ const NavBar = () => {
         <div className="xl:hidden">
           <button onClick={() => setMobileMenuOpen(!mobileMenuOpen)}>
             {mobileMenuOpen ? (
-              <XMarkIcon className="h-6 w-6 text-gray-700" />
+              <XMarkIcon className="h-6 w-6 text-gray-700 dark:!text-gray" />
             ) : (
-              <Bars3Icon className="h-6 w-6 text-gray-700" />
+              <Bars3Icon className="h-6 w-6 text-gray-700 dark:!text-gray" />
             )}
           </button>
         </div>
@@ -100,7 +100,8 @@ const NavBar = () => {
           </Link>
 
 
-          <ProductsDropdown />
+          <ProductsDropdown className="py-1 font-semibold !text-gray-700 hover:!text-red-500 flex items-center gap-1 cursor-pointer dark:!text-white" />
+          <DarkModeToggle className="!py-1 !-mx-6 !font-semibold !bg-white dark:!bg-[#2b2b2b] dark:!text-white rounded" />
           <Link
             to="/contact"
           >

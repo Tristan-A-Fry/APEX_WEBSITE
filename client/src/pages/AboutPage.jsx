@@ -17,7 +17,7 @@ const AboutPage = () => {
         position="top"
       />
 
-      <div className="flex flex-col items-center gap-12 py-12 px-4">
+      <div className="flex flex-col items-center gap-12 py-12 px-4 dark:bg-[#2b2b2b]">
         {/* Section 1 */}
         <div className="bg-[#9C1D20] text-white rounded-lg shadow-lg max-w-5xl w-full overflow-hidden h-[450px] flex items-center justify-center p-6">
           <div className="flex flex-col md:flex-row items-center gap-8 w-full h-full">

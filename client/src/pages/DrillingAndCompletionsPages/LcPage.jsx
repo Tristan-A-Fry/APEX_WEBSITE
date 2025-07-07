@@ -1,4 +1,3 @@
-
 import React from "react";
 import lc1 from "/public/services/lc1.png";
 import lc2 from "/public/services/lc2.jpg";
@@ -16,7 +15,7 @@ import ucImage from "/public/services/uc1.png";
 
 const LcPage = () => {
   return (
-    <div>
+    <div className="bg-white dark:bg-[#2b2b2b] min-h-screen">
       <HeroSection
         title="Lower Completions"
         subtitle="Lower Completions"
@@ -33,20 +32,20 @@ const LcPage = () => {
           />
         </div>
         <div className="w-full md:w-1/2">
-          <h2 className="text-red-800 uppercase font-semibold mb-2">
+          <h2 className="text-red-800 dark:text-red-400 uppercase font-semibold mb-2">
             Lower Completions 
           </h2>
-          <h1 className="text-3xl md:text-4xl font-bold mb-4">
+          <h1 className="text-3xl md:text-4xl font-bold mb-4 text-black dark:text-white">
             Optimizing Production from the Ground Up 
           </h1>
-          <p className="text-gray-700 mb-4">
+          <p className="text-gray-700 dark:text-gray-300 mb-4">
             We develop conventional and reversible synthetic drill-in and
             completion fluids used for Horizontal Open hole producers and water
             injectors. We also design Open hole Horizontal producers with heavy
             brine and low frac margin, complete unconventional and conventional
             reservoirs.
           </p>
-          <p className="text-gray-700 mb-6">
+          <p className="text-gray-700 dark:text-gray-300 mb-6">
             Completion projects range from: Multi-zone SMART completions (3
             zones); MST multi-zone frac systems; High angle Open Hole
             completions; and Cased hole frac pack completions. We also use
@@ -67,15 +66,15 @@ const LcPage = () => {
           />
         </div>
         <div className="w-full md:w-1/2">
-          <h2 className="text-red-800 uppercase font-semibold mb-2">
+          <h2 className="text-red-800 dark:text-red-400 uppercase font-semibold mb-2">
             Advanced Frac Systems
           </h2>
-          <p className="text-gray-700 mb-4">
+          <p className="text-gray-700 dark:text-gray-300 mb-4">
             Our team delivers high-angle open hole completions and cased hole
             frac pack solutions, optimizing performance and ensuring maximum
             production efficiency.
           </p>
-          <p className="text-gray-700 mb-6">
+          <p className="text-gray-700 dark:text-gray-300 mb-6">
             We provide support for MST multi-zone frac systems, ensuring seamless
             operations and enhanced production for your unconventional reservoirs.
           </p>
@@ -93,18 +92,18 @@ const LcPage = () => {
           />
         </div>
         <div className="w-full md:w-1/2">
-          <h2 className="text-red-800 uppercase font-semibold mb-2">
+          <h2 className="text-red-800 dark:text-red-400 uppercase font-semibold mb-2">
             Completion Design Software
           </h2>
-          <h1 className="text-3xl md:text-4xl font-bold mb-4">
+          <h1 className="text-3xl md:text-4xl font-bold mb-4 text-black dark:text-white">
             Comprehensive Support from Start to Finish
           </h1>
-          <p className="text-gray-700 mb-4">
+          <p className="text-gray-700 dark:text-gray-300 mb-4">
             We utilize industry-leading software like StimPlan, WellPlan, WellCat,
             and ackPro to design, simulate, and optimize your lower completion
             systems.
           </p>
-          <p className="text-gray-700 mb-6">
+          <p className="text-gray-700 dark:text-gray-300 mb-6">
             This ensures every lower completion is tailored for optimal production
             and long-term efficiency.
           </p>

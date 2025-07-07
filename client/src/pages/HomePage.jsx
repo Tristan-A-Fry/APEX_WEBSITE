@@ -1,4 +1,3 @@
-
 // src/pages/HomePage.jsx
 import { useEffect } from "react";
 import { Link } from "react-router-dom";
@@ -23,7 +22,7 @@ const logoSizes = {
 export default function HomePage() {
 
   const services = [
-    { title: "Drilling & Completions", image: completions, link: "/drillingcompletions" },
+    { title: "Drilling & Completions", image: completions, link: "/drilling-completions" },
     { title: "SURF", image: monitoring, link: "/surf-sps" },
     { title: "Storage & Maitenence", image: optimisation, link: "#" },
     { title: "Subsea Inspections / I3P", image: intelligence, link: "#" },
@@ -57,8 +56,8 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* Services Section */}
-      <section className="py-20 bg-gray-100 dark:bg-[#2b2b2b]">
+      {/* Core Operations Section */}
+      <section className="py-20 bg-gray-100 dark:bg-[#313131]">
         <div className="max-w-7xl mx-auto px-4">
           <h2 className="text-4xl font-bold text-center text-black dark:text-white mb-12">
             Core Operations
@@ -77,23 +76,25 @@ export default function HomePage() {
       </section>
 
       <FeatureSlider />
+
       <GulfMap />
       
 
       <section id="partners" className="py-20 bg-white dark:bg-[#2b2b2b]">
         <h2 className="text-3xl font-bold text-center text-black dark:text-white mb-12">Our Partners</h2>
         
-        <div className="max-w-6xl mx-auto grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-6 px-4">
-          {["bp", "hwcgBlack", "talos", "shell","beaconn2", "repsol","oxy","eni","kosmos","woodside","karoon"].map((partner) => (
+        <div className="max-w-6xl mx-auto grid grid-cols-1 xs:grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-4 px-2 sm:gap-6 sm:px-4">
+          {[
+            "bp", "hwcgBlack", "talos", "shell","beaconn2", "repsol","oxy","eni","kosmos","woodside","karoon"
+          ].map((partner) => (
             <div
               key={partner}
-              className="w-60 h-28 bg-white dark:bg-[#2b2b2b] rounded-lg flex items-center justify-center 
-                         shadow-md hover:shadow-[0_4px_20px_rgba(239,68,68,0.6)] transition-shadow duration-300"
+              className="w-full h-20 xs:h-24 sm:h-28 bg-white dark:bg-[#2b2b2b] rounded-lg flex items-center justify-center shadow-md hover:shadow-[0_4px_20px_rgba(239,68,68,0.6)] transition-shadow duration-300"
             >
               <img
                 src={`/partner-logos/${partner}.png`}
                 alt={`${partner} logo`}
-                className={`object-contain ${logoSizes[partner] || logoSizes.default}`}
+                className={`object-contain max-h-12 xs:max-h-16 sm:max-h-20 ${logoSizes[partner] || logoSizes.default}`}
               />
             </div>
           ))}

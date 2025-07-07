@@ -6,9 +6,6 @@ import tailwindcss from '@tailwindcss/vite'
 export default defineConfig({
   theme: {
     extend: {
-      fontFamily: {
-        sans: ['Inter', 'ui-sans-serif', 'system-ui'],
-      },
     },
   },
   plugins: [react(), tailwindcss()],

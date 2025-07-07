@@ -19,9 +19,9 @@ const AllProductsServicesPage = () => {
       : products.filter((product) => product.category === selectedCategory);
 
   return (
-    <div className="bg-white text-white min-h-screen">
+    <div className="bg-white text-white min-h-screen dark:bg-[#2b2b2b]">
       {/* Category Buttons */}
-      <div className="w-screen flex flex-wrap justify-center gap-4 mb-10 !bg-gray-100 py-8 px-6 ">
+      <div className="w-screen flex flex-wrap justify-center gap-4 mb-10 bg-gray-white py-8 px-6 dark:!bg-[#2b2b2b] shadow-md">
         {categories.map((category) => (
           <span
             key={category}
@@ -29,8 +29,8 @@ const AllProductsServicesPage = () => {
             className={`cursor-pointer font-semibold text-lg
                         ${
                           selectedCategory === category
-                            ? "text-black border-b-2 border-red-600"
-                            : "text-black hover:text-red-600 hover:border-b-2 hover:border-red-600"
+                            ? "text-black dark:text-white border-b-2 border-red-600"
+                            : "text-black dark:text-white hover:text-red-600 hover:border-b-2 hover:border-red-600"
                         }`}
           >
             {category}
@@ -39,7 +39,7 @@ const AllProductsServicesPage = () => {
       </div>
 
       {/* Product Grid */}
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 px-6">
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 px-6 p-6 bg-gray-100 dark:!bg-[#2b2b2b]" >
         {filteredProducts.map((product) => (
           <div
             key={product.id}
